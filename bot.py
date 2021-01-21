@@ -36,5 +36,5 @@ class Bot():
         for match in matches:
             if (len(match['messages']) == 0):
                 print(f"Sending message to {match['person']['name']}")
-                self.api.send_message(match, match['id'], self.conv_starter)
+                self.api.send_message(match['id'], self.conv_starter)
                 time.sleep(random() * max_sleep + 3)

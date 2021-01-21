@@ -30,7 +30,7 @@ class API():
             headers = {"x-auth-token": self.token}).json()
         return(res["data"]["results"])
 
-    def send_message(self, match, match_id, message):
+    def send_message(self, match_id, message):
         res = requests.post(TINDER_URL + f"/user/matches/{match_id}?locale=en",
             headers = {"x-auth-token": self.token},
             data = { "message": message})
