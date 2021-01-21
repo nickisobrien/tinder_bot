@@ -10,7 +10,7 @@ class Bot():
 
     def autolike(self, max_likes):
         max_sleep = 10
-        print("Starting auotliking")
+        print("Starting autoliking")
 
         while True:
             users = self.api.get_users()
